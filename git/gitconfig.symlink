@@ -1,0 +1,76 @@
+[user]
+	name = Chris Kau
+	email = chris.b.kau@gmail.com
+[core]
+#	editor = mate -w
+  editor = vim
+[color]
+	pager = true
+	ui = auto
+[alias]
+	br = branch
+	ca = commit --amend
+	ci = commit
+	co = checkout
+	ch = cherry-pick
+	di = diff
+	dc = diff --cached
+	dt = difftool
+	fe = fetch
+	fp = format-patch
+	lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cblue(%cr)%Creset %Cgreen(%an)%Creset' --abbrev-commit --date=relative
+	l  = log
+	mt = mergetool
+	pu = pull
+	ri = rebase -i
+	re = reset
+	s  = show
+	st = status
+	wc = whatchanged
+
+
+	last = cat-file commit HEAD
+	stx = ls-files --exclude-per-directory=.gitignore --exclude-from=.git/info/exclude -t -o -u -s -m -d
+	stc   = diff --stat --name-status --cached
+
+#	cat   = -p cat-file -p
+#	up    = !git remote update ; git gc
+#	debug = !GIT_PAGER= gdb --args git
+
+#	top = !eval cd "$(pwd)/$(git rev-parse --show-cdup)" && pwd
+
+#	push-head = !git push origin `git symbolic-ref HEAD`
+#	publish = push publish
+#	pushall = !git remote | xargs -n1 git push
+#	pushalltags = !git remote | xargs -n1 git push --tags
+
+	findnext = rev-list --reverse -n1 HEAD..master
+	checkoutnext = !git checkout `git findnext`
+
+	edit-last-commit = !vim `git diff-tree -r --name-only HEAD HEAD~1`
+	edit-unmerged = "!f() { git ls-files --unmerged | cut -f2 | sort -u ; }; vim `f`"
+	add-unmerged = "!f() { git ls-files --unmerged | cut -f2 | sort -u ; }; git add `f`"
+
+[pack]
+	threads = 0
+[diff "localizablestrings"]
+	textconv = "iconv -f utf-16 -t utf-8"
+[merge]
+	tool = chdiff
+[mergetool "chdiff"]
+	cmd = /usr/bin/env chdiff --wait "$LOCAL" "$REMOTE"
+	keepBackup = false
+	trustExitCode = false
+[gc]
+	reflogexpire = 300
+	reflogexpireunreachable = 90
+[sendemail]
+	chainreplyto = false
+	cccmd = git-cc
+[difftool "Kaleidoscope"]
+	cmd = ksdiff-wrapper git \"$LOCAL\" \"$REMOTE\"
+[difftool]
+	prompt = false
+[diff]
+	tool = Kaleidoscope
+

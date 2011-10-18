@@ -1,0 +1,34 @@
+set start-with-shell 0
+set confirm off
+
+# set env MallocHelp=YES
+# set env NSZombieEnabled=YES
+# set env NSDeallocateZombies=NO
+# set env MallocCheckHeapEach=100000
+# set env MallocCheckHeapStart=100000
+# set env MallocScribble=YES
+# set env MallocGuardEdges=YES
+# set env MallocCheckHeapAbort=1
+# set env CFZombie 5
+
+future-break objc_exception_throw
+future-break objc_autoreleaseNoPool
+# future-break +[NSError errorWithDomain:code:userInfo:]
+future-break handleFailureInMethod:object:file:lineNumber:description:
+future-break handleFailureInFunction:file:lineNumber:description:
+future-break malloc_printf
+future-break malloc_error_break
+future-break auto-refcount_underflow_error
+
+# future-break CGImageCreateWithImageProvider
+
+fb -[_NSZombie init]
+fb -[_NSZombie retainCount]
+fb -[_NSZombie retain]
+fb -[_NSZombie release]
+fb -[_NSZombie autorelease]
+fb -[_NSZombie methodSignatureForSelector:]
+fb -[_NSZombie respondsToSelector:]
+fb -[_NSZombie forwardInvocation:]
+fb -[_NSZombie class]
+fb -[_NSZombie dealloc]
