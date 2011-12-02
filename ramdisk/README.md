@@ -6,4 +6,3 @@ com.chriskau.ramfs.plist
 copy into /var/root/ :
 
 ramfs.sh
-
