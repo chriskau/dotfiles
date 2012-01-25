@@ -44,13 +44,13 @@ set nu " Enable line numbers.
 set report=0 " Show all changes.
 set ruler " Show the cursor position
 set scrolloff=3 " Start scrolling three lines before horizontal border of window.
-set shiftwidth=2 " The # of spaces for indenting.
+set shiftwidth=4 " The # of spaces for indenting.
 set shortmess=atI " Don't show the intro message when starting vim.
 set showmode " Show the current mode.
 set showtabline=2 " Always show tab bar.
 set smarttab " At start of line, <Tab> inserts shiftwidth spaces, <Bs> deletes shiftwidth spaces.
-set tabstop=2
-set softtabstop=2 " Tab key results in 2 spaces
+set tabstop=4
+set softtabstop=4 " Tab key results in 2 spaces
 set title " Show the filename in the window titlebar.
 set ttyfast " Send more characters at a given time.
 set wildchar=<TAB> " Character for CLI expansion (TAB-completion).
@@ -78,7 +78,7 @@ noremap <leader>W :w !sudo tee %<CR>
 command W w
 
 " Toggle show tabs and trailing spaces (,c)
-set lcs=tab:›\ ,trail:·,eol:↴,nbsp:_
+set listchars=tab:▸\ ,eol:¬,trail:·,nbsp:_
 set fcs=fold:-
 nnoremap <silent> <leader>c :set nolist!<CR>
 
