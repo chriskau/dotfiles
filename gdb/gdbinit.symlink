@@ -20,6 +20,8 @@ future-break malloc_printf
 future-break malloc_error_break
 future-break auto-refcount_underflow_error
 
+future-break NSKVODeallocateBreak
+
 # future-break CGImageCreateWithImageProvider
 
 fb -[_NSZombie init]
