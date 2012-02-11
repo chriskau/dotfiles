@@ -53,24 +53,18 @@
 
 [pack]
 	threads = 0
-[diff "localizablestrings"]
-	textconv = "iconv -f utf-16 -t utf-8"
-[merge]
-	tool = chdiff
-[mergetool "chdiff"]
-	cmd = /usr/bin/env chdiff --wait "$LOCAL" "$REMOTE"
-	keepBackup = false
-	trustExitCode = false
 [gc]
 	reflogexpire = 300
 	reflogexpireunreachable = 90
 [sendemail]
 	chainreplyto = false
 	cccmd = git-cc
-[difftool "Kaleidoscope"]
-	cmd = ksdiff-wrapper git \"$LOCAL\" \"$REMOTE\"
+
+[diff]
+	tool = vimdiff
 [difftool]
 	prompt = false
-[diff]
-	tool = Kaleidoscope
+
+[merge]
+	conflictstyle = diff3
 
