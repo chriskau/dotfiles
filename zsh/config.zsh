@@ -54,6 +54,9 @@ bindkey '^[[3~' delete-char
 bindkey '^[^N' newtab
 bindkey '^?' backward-delete-char
 
+# enable vi mode
+bindkey -v
+
 
 # show full history or search history
 h() { if [ -z "$*" ]; then history 1; else history 1 | egrep "$@"; fi; }
@@ -130,3 +133,4 @@ gssp() {
 
 # syntax highlighting
 source /Users/chris/Work/repos/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
