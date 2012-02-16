@@ -70,3 +70,5 @@
 
 [rerere]
 	enabled = 1
+[difftool "Kaleidoscope"]
+	cmd = ksdiff-wrapper git \"$LOCAL\" \"$REMOTE\"
