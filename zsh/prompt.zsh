@@ -32,7 +32,8 @@ git_prompt_info () {
 }
 
 unpushed () {
-  /usr/bin/git cherry -v origin/$(git_branch) 2>/dev/null
+#  /usr/bin/git cherry -v origin/$(git_branch) 2>/dev/null
+/usr/bin/git cherry -v @{upstream} 2>/dev/null
 }
 
 need_push () {
@@ -82,12 +83,13 @@ directory_name(){
 
 export PROMPT=$'in $(directory_name) on%{${fg[green]}%}$(__git_ps1)%{$reset_color%}\n› '
 
-set_prompt () {
+#set_prompt () {
 #  export RPROMPT='%{$fg_bold[grey]%}$(battery_status)%{$reset_color%}'
-  export RPROMPT='$(battery_status)'
-}
+#  export RPROMPT='$(battery_status)'
+#}
 
 precmd() {
   title "zsh" "%m" "%55<...<%~"
-  set_prompt
+#  set_prompt
 }
+

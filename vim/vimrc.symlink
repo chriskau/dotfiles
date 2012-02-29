@@ -77,6 +77,9 @@ noremap <leader>W :w !sudo tee %<CR>
 " Remap :W to :w
 command W w
 
+" Remap : to ;
+nnoremap ; :
+
 " Toggle show tabs and trailing spaces (,c)
 set listchars=tab:▸\ ,eol:¬,trail:·,nbsp:_
 set fcs=fold:-
@@ -166,3 +169,6 @@ autocmd BufWritePre * :%s/\s\+$//e
 " when vimrc is edited, reload it
 autocmd bufwritepost .gvimrc source $MYGVIMRC
 autocmd bufwritepost .vimrc source $MYVIMRC
+
+nmap <silent> ,/ :nohlsearch<CR>
+

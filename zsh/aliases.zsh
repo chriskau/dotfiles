@@ -68,3 +68,6 @@ alias gsl="git stash list"
 alias gsp="git stash pop"
 alias gsr="git svn rebase"
 alias gw="git wc"
+
+alias tmux="TERM=screen-256color-bce tmux"
+
