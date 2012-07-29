@@ -1,3 +1,6 @@
+call pathogen#infect()
+
+
 " Set syntax highlighting options.
 set t_Co=256
 set background=dark
@@ -171,4 +174,16 @@ autocmd bufwritepost .gvimrc source $MYGVIMRC
 autocmd bufwritepost .vimrc source $MYVIMRC
 
 nmap <silent> ,/ :nohlsearch<CR>
+
+" Numbers plugin
+nnoremap <F3> :NumbersToggle<CR>
+
+" key mapping for google search
+function! Google()
+    call inputsave()
+    let searchterm = input('Google: ')
+    call inputrestore()
+    return searchterm
+endfunction
+map © <ESC>:! /usr/bin/open -a "/Applications/Google Chrome.app" 'https://google.com/search?q=<C-R>=Google()<CR>'<CR><CR>
 
