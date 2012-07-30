@@ -1,53 +1,52 @@
 # Secure Users' Home Folder Permissions
-sudo chmod go-rx /Users/chris
-sudo chmod go-rx /Users/Guest
-sudo chmod go-rx /Users/Shared
+chmod go-rx /Users/chris
+chmod go-rx /Users/Guest
 
 
 # Disable Unnecessary Services
-sudo launchctl unload -w /System/Library/LaunchDaemons/com.apple.blued.plist
-sudo launchctl unload -w /System/Library/LaunchDaemons/com.apple.nis.ypbind.plist
-sudo launchctl unload -w /System/Library/LaunchDaemons/com.apple.com.apple.RemoteDesktop.PrivilegeProxy.plist
-sudo launchctl unload -w /System/Library/LaunchDaemons/com.apple.RFBEventHelper.plist
-sudo launchctl unload -w /System/Library/LaunchDaemons/com.apple.racoon.plist
-sudo launchctl unload -w /System/Library/LaunchDaemons/com.apple.UserNotificationCenter.plist
-sudo launchctl unload -w /System/Library/LaunchDaemons/com.apple.webdavfs_load_kext.plist
-sudo launchctl unload -w /System/Library/LaunchDaemons/org.postfix.master.plist
+launchctl unload -w /System/Library/LaunchDaemons/com.apple.blued.plist
+launchctl unload -w /System/Library/LaunchDaemons/com.apple.nis.ypbind.plist
+launchctl unload -w /System/Library/LaunchDaemons/com.apple.RemoteDesktop.PrivilegeProxy.plist
+launchctl unload -w /System/Library/LaunchDaemons/com.apple.RFBEventHelper.plist
+launchctl unload -w /System/Library/LaunchDaemons/com.apple.racoon.plist
+launchctl unload -w /System/Library/LaunchDaemons/com.apple.UserNotificationCenter.plist
+launchctl unload -w /System/Library/LaunchDaemons/com.apple.webdavfs_load_kext.plist
+launchctl unload -w /System/Library/LaunchDaemons/org.postfix.master.plist
 
-sudo launchctl unload -w /System/Library/LaunchAgents/com.apple.RemoteDesktop.plist
+launchctl unload -w /System/Library/LaunchAgents/com.apple.RemoteDesktop.plist
 
 
 # Disable Setuid and Setguid Binaries
-sudo chmod ug-s /System/Library/CoreServices/RemoteManagement/ARDAgent.app/Contents/MacOS/ARDAgent
-sudo chmod ug-s /System/Library/Printers/IOMs/LPRIOM.plugin/Contents/MacOS/LPRIOMHelper
+chmod ug-s /System/Library/CoreServices/RemoteManagement/ARDAgent.app/Contents/MacOS/ARDAgent
+# chmod ug-s /System/Library/Printers/IOMs/LPRIOM.plugin/Contents/MacOS/LPRIOMHelper
 # /System/Library/PrivateFrameworks/Admin.framework/Versions/A/Resources/readconfig
 # /System/Library/PrivateFrameworks/Install.framework/Versions/A/Resources/runner
 
-sudo chmod ug-s /sbin/mount_nfs
+chmod ug-s /sbin/mount_nfs
 
-sudo chmod ug-s /usr/bin/at
-sudo chmod ug-s /usr/bin/atq
-sudo chmod ug-s /usr/bin/atrm
-sudo chmod ug-s /usr/bin/batch
-sudo chmod ug-s /usr/bin/chpass
-sudo chmod ug-s /usr/bin/crontab
-sudo chmod ug-s /usr/bin/ipcs
-sudo chmod ug-s /usr/bin/newgrp
-sudo chmod ug-s /usr/bin/procmail
-sudo chmod ug-s /usr/bin/wall
-sudo chmod ug-s /usr/bin/write
-sudo chmod ug-s /bin/rcp
-sudo chmod ug-s /usr/bin/rlogin
-sudo chmod ug-s /usr/bin/rsh
-sudo chmod ug-s /usr/lib/sa/sadc
+chmod ug-s /usr/bin/at
+chmod ug-s /usr/bin/atq
+chmod ug-s /usr/bin/atrm
+chmod ug-s /usr/bin/batch
+chmod ug-s /usr/bin/chpass
+chmod ug-s /usr/bin/crontab
+chmod ug-s /usr/bin/ipcs
+chmod ug-s /usr/bin/newgrp
+chmod ug-s /usr/bin/procmail
+chmod ug-s /usr/bin/wall
+chmod ug-s /usr/bin/write
+chmod ug-s /bin/rcp
+chmod ug-s /usr/bin/rlogin
+chmod ug-s /usr/bin/rsh
+chmod ug-s /usr/lib/sa/sadc
 
-sudo chmod ug-s /usr/sbin/postdrop
-sudo chmod ug-s /usr/sbin/postqueue
-sudo chmod ug-s /usr/sbin/scselect
-sudo chmod ug-s /usr/sbin/traceroute
-sudo chmod ug-s /usr/sbin/traceroute6
+chmod ug-s /usr/sbin/postdrop
+chmod ug-s /usr/sbin/postqueue
+chmod ug-s /usr/sbin/scselect
+chmod ug-s /usr/sbin/traceroute
+chmod ug-s /usr/sbin/traceroute6
 
 
 # Disable Bonjour
-sudo defaults write /System/Library/LaunchDaemons/com.apple.mDNSResponder ProgramArguments -array-add "-NoMulticastAdvertisements"
+defaults write /System/Library/LaunchDaemons/com.apple.mDNSResponder ProgramArguments -array-add "-NoMulticastAdvertisements"
 
