@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>kvo</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>CodeBlock</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>[self willChangeValueForKey:@"&lt;#ivar#&gt;"];
+[&lt;#ivar#&gt; autorelease];
+&lt;#ivar#&gt; = [&lt;#newValue#&gt; retain];
+[self didChangeValueForKey:@"&lt;#ivar#&gt;"];
+</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>0AC31805-4C03-487E-B999-22204C7F9D45</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetSummary</key>
+	<string>Use when overriding @synthesized property setter methods</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>KVO Setter</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>
