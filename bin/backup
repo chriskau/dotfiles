@@ -2,13 +2,6 @@
 IFS=$'\n'
 
 # Copies a few key files to a mounted partition.
-#
-# I use Time Machine for backups, but I also wanted to build out an
-# offsite backup with my critical nonreplaceable data (photos, documents,
-# etc). Since it's mobile, encryption is a plus (which Time Machine
-# doesn't easily do). I create an encrypted sparsebundle on a tiny USB
-# drive and do it to it.
-
 
 # Your sparsebundle. I named mine "fuckplanets" because really, fuck planets.
 sparsebundle="/Volumes/fuckplanets/backup.sparsebundle"
@@ -18,7 +11,7 @@ backup_location="/Volumes/backup"
 
 # Directories to backup. Recursive, implied home (~) location.
 directories=(
-  Development
+  Code
   Documents
   "Library/Application Support/Adium 2.0"
   Movies
@@ -37,3 +30,4 @@ done
 
 hdiutil detach $backup_location
 diskutil eject fuckplanets
+

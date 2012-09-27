@@ -3,10 +3,9 @@ call pathogen#infect()
 
 " Set syntax highlighting options.
 set t_Co=256
-set background=dark
 syntax on
+set background=dark
 colorscheme solarized
-set guifont=Inconsolata:h14
 
 " Change mapleader
 let mapleader=","

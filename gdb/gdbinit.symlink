@@ -24,6 +24,8 @@ future-break NSKVODeallocateBreak
 
 # future-break CGImageCreateWithImageProvider
 
+fb -[NSObject(NSObject) doesNotRecognizeSelector:]
+
 fb -[_NSZombie init]
 fb -[_NSZombie retainCount]
 fb -[_NSZombie retain]

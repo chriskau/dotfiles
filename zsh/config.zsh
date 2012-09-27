@@ -13,6 +13,7 @@ autoload -U compinit promptinit
 compinit
 promptinit
 
+autoload -U zmv         # for massive renames
 
 # autoload zsh functions
 fpath=($ZSH/zsh/functions $fpath)
@@ -53,9 +54,6 @@ bindkey '^[[5C' end-of-line
 bindkey '^[[3~' delete-char
 bindkey '^[^N' newtab
 bindkey '^?' backward-delete-char
-
-# enable vi mode
-bindkey -v
 
 
 # show full history or search history
@@ -128,9 +126,4 @@ gssp() {
 		git stash show -p stash@{0}
 	fi
 }
-
-
-
-# syntax highlighting
-source /Users/chris/Work/repos/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
