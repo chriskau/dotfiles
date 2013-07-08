@@ -1,0 +1,6 @@
+# git interactive rebase
+gri() {
+	if [ -n "$1" ]; then
+		git rebase -i "HEAD~${1}"
+	fi
+}

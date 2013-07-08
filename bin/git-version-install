@@ -1,8 +1,6 @@
 #!/bin/bash
 #
 
-# get git
-
 function usage()
 {
 	echo "Usage: `basename ${0}` <version>"
@@ -15,33 +13,21 @@ fi
 
 cd /tmp
 
-curl "http://git-core.googlecode.com/files/git-${1}.tar.gz" -O
-curl "http://git-core.googlecode.com/files/git-manpages-${1}.tar.gz" -O
-
-#curl "http://kernel.org/pub/software/scm/git/git-${1}.tar.gz" -O
-#curl "http://www.kernel.org/pub/software/scm/git/git-manpages-${1}.tar.gz" -O
+curl "https://codeload.github.com/git/git/tar.gz/v${1}" -o "v${1}.tar.gz"
 
 export CC=llvm-gcc CXX=llvm-g++
+export NO_GETTEXT=YesPlease
 
 # installing git
-tar xzf "git-${1}.tar.gz"
+tar xzf "v${1}.tar.gz"
 cd "git-${1}"
-./configure --prefix=/usr --build=x86_64-apple-darwin11.0.0
-make
-sudo make install
+make prefix=/usr
+sudo make prefix=/usr install install-doc
 
-# installing shell extension
-rm -f ~/.dotfiles/git/git-completion.sh
-cp ./contrib/completion/git-completion.sh ~/.dotfiles/git/
-
-cd ..
-
-# installing man pages
-sudo tar xjv -C /usr/share/man -f "git-manpages-${1}.tar.gz"
+#cd ..
 
 # clean up
-rm -rf "git-${1}"
-rm "git-${1}.tar.gz"
-rm "git-manpages-${1}.tar.gz"
+#rm -rf "git-${1}"
+#rm "v${1}.tar.gz"
 
 exit $?

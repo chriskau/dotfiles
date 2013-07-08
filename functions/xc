@@ -1,0 +1,3 @@
+xc() {
+    'open *.xcodeproj'
+}

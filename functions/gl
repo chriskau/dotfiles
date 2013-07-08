@@ -1,0 +1,8 @@
+# git log nicely formatted
+gl() {
+	if [ -n "$1" ]; then
+		git log "${1}" --pretty=format:'%Cred%h%Creset -%Creset %s %Cblue(%cr)%Creset %Cgreen(%an)%Creset' --abbrev-commit --date=relative
+	else
+		git lg
+	fi
+}

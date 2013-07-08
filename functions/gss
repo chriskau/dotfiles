@@ -1,0 +1,8 @@
+# show stash
+gss() {
+	if [ -n "$1" ]; then
+		git stash show stash@{$1}
+	else
+		git stash show stash@{0}
+	fi
+}

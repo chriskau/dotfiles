@@ -6,15 +6,18 @@ alias -g ....='../../..'
 alias -g .....='../../../..'
 
 # suffix aliases
-alias -s txt=mate
+alias -s js=vim
+alias -s txt=vim
+alias -s rb=vim
+alias -s log="less -MN"
+alias -s db="open -a /Applications/Base.app/Contents/MacOS/Base"
+alias -s md="open -a '/Applications/iA Writer.app/Contents/MacOS/iA Writer'"
 
 # general aliases
 alias ax="axel -a"
-alias axel="axel -a"
 alias am="open -a 'Activity Monitor'"
 alias dl='chdiff --local-scm'
 alias ducks='du -ksh * |sort -rn |head -11'
-alias gh="open http://github.com/chriskau"
 alias hist="history"
 alias ll="ls -la"
 alias ll@="ls -la@"
@@ -25,13 +28,6 @@ alias pbs="/System/Library/CoreServices/pbs"
 alias pbztar='tar --use-compress-prog=pbzip2'
 alias rmds='find . -name .DS_Store -delete'
 alias rmo='find . -name *.orig -delete'
-
-# Xcode related aliases
-alias xb="xcodebuild"
-alias xc='open *.xcodeproj'
-alias xc4='open -a /Xcode4/Applications/Xcode.app *.xcodeproj'
-alias xcleand="xcodebuild clean -configuration Debug"
-alias xcleanr="xcodebuild clean -configuration Release"
 
 # git aliases
 alias b="git blame"
@@ -48,10 +44,12 @@ alias gca="git commit --amend"
 alias gcim="git commit -m"
 alias gcoh="git checkout HEAD"
 alias gd="git diff"
+alias gdc="git diff --cached"
 alias gdt="git difftool"
 alias gi="gity"
 alias gf="git fetch -v"
 alias gll="git log"
+alias gmt="git mergetool"
 alias go="git checkout"
 alias gp="git pull origin"
 alias gpa="g format-patch --attach -1 -o ~/Desktop/Patches"
@@ -70,4 +68,7 @@ alias gsr="git svn rebase"
 alias gw="git wc"
 
 alias tmux="TERM=screen-256color-bce tmux"
+
+# Quick way to rebuild the Launch Services database and get rid of duplicates in the Open With submenu
+alias fixopenwith="/System/Library/Frameworks/CoreServices.framework/Frameworks/LaunchServices.framework/Support/lsregister -kill -r -domain local -domain system -domain user"
 

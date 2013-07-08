@@ -1,3 +1,5 @@
+#!/bin/sh
+
 # Secure Users' Home Folder Permissions
 chmod go-rx /Users/chris
 chmod go-rx /Users/Guest
@@ -13,7 +15,11 @@ launchctl unload -w /System/Library/LaunchDaemons/com.apple.UserNotificationCent
 launchctl unload -w /System/Library/LaunchDaemons/com.apple.webdavfs_load_kext.plist
 launchctl unload -w /System/Library/LaunchDaemons/org.postfix.master.plist
 
+# disable remote desktop
 launchctl unload -w /System/Library/LaunchAgents/com.apple.RemoteDesktop.plist
+
+# disable notification center
+launchctl unload -w /System/Library/LaunchAgents/com.apple.notificationcenterui.plist
 
 
 # Disable Setuid and Setguid Binaries

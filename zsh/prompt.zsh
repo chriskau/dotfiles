@@ -45,32 +45,13 @@ need_push () {
   fi
 }
 
-# battery status
-battery_status() {
-  if [ `~/bin/batt --is-charged` -eq 1 ] ; then
-      echo "⚡"
-  fi
-
-  if [ `~/bin/batt --is-charging` -eq 1 ] ; then
-    echo "⚡ `~/bin/batt --time-to-full-charge`"
-  else
-    ~/bin/batt --time-to-empty
-  fi
-}
-
 directory_name(){
   echo "%{$fg_bold[cyan]%}%1/%\/%{$reset_color%}"
 }
 
 export PROMPT=$'in $(directory_name) on%{${fg[green]}%}$(__git_ps1)%{$reset_color%}\n› '
 
-set_prompt () {
-  export RPROMPT='%{$fg_bold[grey]%}$(battery_status)%{$reset_color%}'
-  export RPROMPT='$(battery_status)'
-}
-
 precmd() {
   title "zsh" "%m" "%55<...<%~"
-#  set_prompt
 }
 

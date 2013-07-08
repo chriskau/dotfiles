@@ -3,25 +3,19 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>kvo</string>
+	<string>ed</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
 		<string>CodeBlock</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>[self willChangeValueForKey:@"ivar"];
-[&lt;#ivar#&gt; autorelease];
-&lt;#ivar#&gt; = [&lt;#newValue#&gt; retain];
-[self didChangeValueForKey:@"&lt;#ivar#&gt;"];
-</string>
+	<string>NSLog(@"ERROR: %@", error.localizedDescription);</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>0AC31805-4C03-487E-B999-22204C7F9D45</string>
+	<string>16F9982E-61CD-490B-930E-69421DDBE449</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Objective-C</string>
-	<key>IDECodeSnippetSummary</key>
-	<string>Use when overriding @synthesized property setter methods</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>KVO Setter</string>
+	<string>Output error description</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>

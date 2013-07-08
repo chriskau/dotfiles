@@ -1,0 +1,8 @@
+# print all commit messages since commit/tag
+notes() {
+	if [ -n "$1" ]; then
+		git log "${1}.." --pretty='%s %b' --abbrev-commit
+	else
+		echo "error: missing version or SHA"
+	fi
+}

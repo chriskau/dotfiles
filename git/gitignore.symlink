@@ -1,11 +1,9 @@
-# OS X
 .DS_Store
 Icon?
-
-# Thumbnails
 ._*
-
-# Files that might appear on external disk
+.svn
+*~
+*.swp
 .Spotlight-V100
 .Trashes
 

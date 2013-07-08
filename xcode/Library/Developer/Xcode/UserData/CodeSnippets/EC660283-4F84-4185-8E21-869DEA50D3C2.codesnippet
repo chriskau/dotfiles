@@ -3,25 +3,28 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>kvo</string>
+	<string>adfl</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
-		<string>CodeBlock</string>
+		<string>ClassImplementation</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>[self willChangeValueForKey:@"ivar"];
-[&lt;#ivar#&gt; autorelease];
-&lt;#ivar#&gt; = [&lt;#newValue#&gt; retain];
-[self didChangeValueForKey:@"&lt;#ivar#&gt;"];
-</string>
+	<string>- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
+{
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    self.window.rootViewController = [[ViewController alloc] init];
+    [self.window makeKeyAndVisible];
+
+    return YES;
+}</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>0AC31805-4C03-487E-B999-22204C7F9D45</string>
+	<string>EC660283-4F84-4185-8E21-869DEA50D3C2</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Objective-C</string>
-	<key>IDECodeSnippetSummary</key>
-	<string>Use when overriding @synthesized property setter methods</string>
+	<key>IDECodeSnippetPlatformFamily</key>
+	<string>iphoneos</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>KVO Setter</string>
+	<string>application:didFinishLaunchingWithOptions:</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>

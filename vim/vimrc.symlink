@@ -1,4 +1,8 @@
-call pathogen#infect()
+" all of the plugins are installed with Vundle from this file.
+source ~/.vim/vundle.vim
+
+" automatically detect file types. must turn on after Vundle
+filetype plugin indent on
 
 
 " Set syntax highlighting options.
@@ -12,7 +16,7 @@ let mapleader=","
 
 " Local dirs
 set backupdir=~/.vim/backups
-set directory=.,$TEMP
+set directory=/tmp
 
 set autoindent " Copy indent from last line when starting new line.
 set smartindent " ???
@@ -67,12 +71,6 @@ set formatoptions=qrn1
 nnoremap <C-e> 3<C-e>
 nnoremap <C-y> 3<C-y>
 
-" Remap arrow keys
-" inoremap <Left>  <NOP>
-" inoremap <Right> <NOP>
-" inoremap <Up>    <NOP>
-" inoremap <Down>  <NOP>
-
 " Sudo write (,W)
 noremap <leader>W :w !sudo tee %<CR>
 
@@ -105,6 +103,7 @@ map <leader>p :set invpaste paste?<CR>
 
 " Nerdtree (,n)
 map <leader>n :NERDTreeToggle<CR>
+let NERDTreeShowHidden=1 " show hidden files
 
 " Buffer navigation (,,) (,]) (,[) (,ls)
 map <Leader>, <C-^>
@@ -137,19 +136,11 @@ map <PageDown> <C-D>
 imap <PageUp> <C-O><C-U>
 imap <PageDown> <C-O><C-D>
 
-" filetype plugin indent on
-:filetype on
-filetype plugin on
-filetype plugin on
-
 " Restore cursor position
 autocmd BufReadPost *
   \ if line("'\"") > 1 && line("'\"") <= line("$") |
   \   exe "normal! g`\"" |
   \ endif
-
-" Emulate bundles, allow plugins to live independantly. Easier to manage.
-" call pathogen#runtime_append_all_bundles()
 
 " Markdown
 augroup mkd
@@ -166,6 +157,8 @@ au BufRead,BufNewfile *.rb set ft=ruby syntax=ruby
 au BufRead,BufNewfile *.md set ft=markdown syntax=markdown
 " autocmd BufWritePost *.js JSLint
 
+autocmd BufNewFile,BufRead *.jade set filetype=jade "so that the vim-jade plugin works: https://github.com/digitaltoad/vim-jade/issues/25
+
 autocmd BufWritePre * :%s/\s\+$//e
 
 " when vimrc is edited, reload it
@@ -177,15 +170,9 @@ nmap <silent> ,/ :nohlsearch<CR>
 " Numbers plugin
 nnoremap <F3> :NumbersToggle<CR>
 
-" key mapping for google search
-function! Google()
-    call inputsave()
-    let searchterm = input('Google: ')
-    call inputrestore()
-    return searchterm
-endfunction
-map © <ESC>:! /usr/bin/open -a "/Applications/Google Chrome.app" 'https://google.com/search?q=<C-R>=Google()<CR>'<CR><CR>
-
-" enable fancy mode
-let g:Powerline_symbols = 'fancy'
-
+" Powerline
+if has("gui_macvim")
+    " don't add Powerline, it crashes the default version of MacVim
+else
+    source /Users/chris/Library/Python/2.7/lib/python/site-packages/powerline/bindings/vim/plugin/powerline.vim
+endif

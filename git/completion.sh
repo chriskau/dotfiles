@@ -1,5 +1,5 @@
 #use git autocompletion for inner commands
-completion=~/.dotfiles/zsh/functions/git-completion.bash
+completion=~/.dotfiles/git/git-completion.bash
 
 if test -f $completion
 then

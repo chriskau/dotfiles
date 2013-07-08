@@ -1,0 +1,8 @@
+# show stash in patch form
+gssp() {
+	if [ -n "$1" ]; then
+		git stash show -p stash@{$1}
+	else
+		git stash show -p stash@{0}
+	fi
+}
