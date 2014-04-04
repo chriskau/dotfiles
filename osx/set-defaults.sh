@@ -382,6 +382,16 @@ defaults write com.apple.TimeMachine DoNotOfferNewDisksForBackup -bool true
 # Disable local Time Machine backups
 hash tmutil &> /dev/null && sudo tmutil disablelocal
 
+###############################################################################
+# Security                                                                    #
+###############################################################################
+
+# disable automatic login and user list
+defaults write /Library/Preferences/.GlobalPreferences com.apple.userspref.DisableAutoLogin -bool yes
+
+# set the auto log out delay to 10 mins
+defaults write /Library/Preferences/.GlobalPreferences com.apple.autologout.AutoLogOutDelay -int 600
+
 
 ###############################################################################
 # Kill affected applications                                                  #
