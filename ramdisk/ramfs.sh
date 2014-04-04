@@ -1,5 +1,5 @@
 #!/bin/bash
-ramfs_size_mb=512
+ramfs_size_mb=2048
 mount_point=/private/tmp
 
 ramfs_size_sectors=$((${ramfs_size_mb}*1024*1024/512))
