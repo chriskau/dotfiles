@@ -363,8 +363,8 @@ defaults write com.apple.DiskUtility DUDebugMenuEnabled -bool true
 defaults write com.apple.terminal StringEncodings -array 4
 
 # Use the Pro theme by default in Terminal.app
-defaults write com.apple.Terminal "Default Window Settings" -string "Pro 1"
-defaults write com.apple.Terminal "Startup Window Settings" -string "Pro 1"
+defaults write com.apple.Terminal "Default Window Settings" -string "Home"
+defaults write com.apple.Terminal "Startup Window Settings" -string "Home"
 
 # Enable “focus follows mouse” for Terminal.app and all X11 apps
 # This means you can hover over a window and start typing in it without clicking first
