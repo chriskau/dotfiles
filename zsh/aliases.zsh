@@ -16,11 +16,13 @@ alias -s md="open -a '/Applications/iA Writer.app/Contents/MacOS/iA Writer'"
 # general aliases
 alias ax="axel -a"
 alias am="open -a 'Activity Monitor'"
+alias con="tail -40 -f /var/log/system.log"
 alias dl='chdiff --local-scm'
 alias ducks='du -ksh * |sort -rn |head -11'
 alias hist="history"
-alias ll="ls -la"
+alias ll="ls -lahL"
 alias ll@="ls -la@"
+alias llt="ls -lahLt"
 alias lsregister="/System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/LaunchServices.framework/Versions/A/Support/lsregister"
 alias lt="date"
 alias p="ps ax|grep"

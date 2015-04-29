@@ -1,5 +1,6 @@
 #use git autocompletion for inner commands
-completion=~/.dotfiles/git/git-completion.bash
+
+completion='$(brew --prefix)/share/zsh/site-functions/_git'
 
 if test -f $completion
 then

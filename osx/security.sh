@@ -25,8 +25,8 @@ launchctl unload -w /System/Library/LaunchAgents/com.apple.notificationcenterui.
 # disable Setuid and Setguid Binaries
 chmod ug-s /System/Library/CoreServices/RemoteManagement/ARDAgent.app/Contents/MacOS/ARDAgent
 chmod ug-s /System/Library/Printers/IOMs/LPRIOM.plugin/Contents/MacOS/LPRIOMHelper
-/System/Library/PrivateFrameworks/Admin.framework/Versions/A/Resources/readconfig
-/System/Library/PrivateFrameworks/Install.framework/Versions/A/Resources/runner
+#/System/Library/PrivateFrameworks/Admin.framework/Versions/A/Resources/readconfig
+#/System/Library/PrivateFrameworks/Install.framework/Versions/A/Resources/runner
 
 chmod ug-s /sbin/mount_nfs
 
@@ -54,7 +54,7 @@ chmod ug-s /usr/sbin/traceroute6
 
 
 # disable Bonjour
-defaults write /System/Library/LaunchDaemons/com.apple.mDNSResponder ProgramArguments -array-add "-NoMulticastAdvertisements"
+# defaults write /System/Library/LaunchDaemons/com.apple.mDNSResponder ProgramArguments -array-add "-NoMulticastAdvertisements"
 
 # disable SafeSleep/Hibernate
 # pmset hibernatemode 0

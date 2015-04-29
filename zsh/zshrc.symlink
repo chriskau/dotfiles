@@ -18,5 +18,5 @@ compinit
 # load every completion after autocomplete loads
 for config_file ($ZSH/**/completion.sh) source $config_file
 
-# syntax highlighting
-source $HOME/Work/repos/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+# initialise fasd
+eval "$(fasd --init auto)"
