@@ -7,9 +7,12 @@ Icon?
 .Spotlight-V100
 .Trashes
 
-# Xcode
+# Xcode / Swift
 *.orig
+.build/
+build/
 build/*
+DerivedData
 *.pbxuser
 !default.pbxuser
 *.mode1v3
@@ -23,3 +26,11 @@ build/*
 xcuserdata
 profile
 *.moved-aside
+*.xccheckout
+*.xcuserstate
+*.xcscmblueprint
+
+# Obj-C/Swift specific
+*.hmap
+*.ipa
+

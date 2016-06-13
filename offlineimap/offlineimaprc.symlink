@@ -1,0 +1,50 @@
+[general]
+ui = ttyui
+accounts = Gmail
+fsync = no
+maxsyncaccounts = 1
+pythonfile = ~/.offlineimap/offlineimap.py
+
+[Account Gmail]
+localrepository = Gmail-Local
+remoterepository = Gmail-Remote
+status_backend = sqlite
+
+[Repository Gmail-Local]
+type = Maildir
+localfolders = ~/.mail/chris.b.kau@gmail.com
+sep = /
+nametrans = lambda folder: {'Archive':  '[Gmail]/All Mail',
+                            'Drafts':   '[Gmail]/Drafts',
+                            'Important':'[Gmail]/Important',
+                            'Sent':     '[Gmail]/Sent Mail',
+                            'Spam':     '[Gmail]/Spam',
+                            'Flagged':  '[Gmail]/Starred',
+                            'Trash':    '[Gmail]/Trash',
+                            }.get(folder, folder)
+
+[Repository Gmail-Remote]
+type = Gmail
+auth_mechanisms = LOGIN
+remoteuser = chris.b.kau@gmail.com
+remotepasseval = get_keychain_pass(account="chris.b.kau", server="imap.gmail.com")
+maxconnections = 2
+realdelete = no
+ssl = yes
+sslcacertfile = /usr/local/etc/openssl/osx_cert.pem
+nametrans = lambda folder: {'[Gmail]/All Mail':  'Archive',
+                            '[Gmail]/Drafts':    'Drafts',
+                            '[Gmail]/Important': 'Important',
+                            '[Gmail]/Sent Mail': 'Sent',
+                            '[Gmail]/Spam':      'Spam',
+                            '[Gmail]/Starred':   'Flagged',
+                            '[Gmail]/Trash':     'Trash',
+                            }.get(folder, folder)
+
+[mbnames]
+enabled = yes
+filename = ~/.mutt/mailboxes
+header = "mailboxes "
+peritem = "+%(accountname)s/%(foldername)s"
+sep = " "
+footer = "\n"

@@ -1,2 +1,2 @@
-command source ~/.lldb-gdb`
 command script import /usr/local/Cellar/chisel/1.0.0/libexec/fblldb.py
+command alias uikit expr @import UIKit

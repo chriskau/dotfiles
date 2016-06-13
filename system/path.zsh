@@ -1,3 +1,3 @@
-export PATH="./bin:/usr/local/bin:/usr/local/sbin:$ZSH/bin:$HOME/.node/bin:$PATH"
+export PATH="$PATH:$HOME/.node/bin:$ZSH/bin"
 
 export MANPATH="/usr/local/man:/usr/local/git/man:$MANPATH"

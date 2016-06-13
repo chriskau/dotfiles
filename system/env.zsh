@@ -2,3 +2,6 @@
 if [[ "$EDITOR" == "" ]] ; then
   export EDITOR='vim'
 fi
+
+# opt out of homebrew analytics
+export HOMEBREW_NO_ANALYTICS=1
