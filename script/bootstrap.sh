@@ -8,13 +8,10 @@ fi
 # Update homebrew recipes
 brew update
 
-# Install GNU core utilities (those that come with OS X are outdated)
-brew install coreutils
-
-
 # Binaries
 binaries=(
   awscli
+  axel
   chkrootkit
   fasd
   git

@@ -1,8 +1,21 @@
+set nocompatible              " be iMproved, required
+filetype off                  " required
+
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+" alternatively, pass a path where Vundle should install plugins
+"call vundle#begin('~/some/path/here')
+
+" let Vundle manage Vundle, required
+Plugin 'VundleVim/Vundle.vim'
+
 " all of the plugins are installed with Vundle from this file.
 source ~/.vim/vundle.vim
 
-" automatically detect file types. must turn on after Vundle
-filetype plugin indent on
+" All of your Plugins must be added before the following line
+call vundle#end()            " required
+filetype plugin indent on    " required
 
 
 " Set syntax highlighting options.
@@ -171,8 +184,6 @@ nmap <silent> ,/ :nohlsearch<CR>
 nnoremap <F3> :NumbersToggle<CR>
 
 " Powerline
-if has("gui_macvim")
-    " don't add Powerline, it crashes the default version of MacVim
-else
-    source /Users/chris/Library/Python/2.7/lib/python/site-packages/powerline/bindings/vim/plugin/powerline.vim
-endif
+set  rtp+=/usr/local/lib/python2.7/dist-packages/powerline/bindings/vim/
+set laststatus=2
+set t_Co=256

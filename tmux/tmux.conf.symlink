@@ -19,7 +19,7 @@ set -g default-terminal "screen-256color"
 set -g history-limit 10000
 
 # use Powerline
-source '/Users/chris/Library/Python/2.7/lib/python/site-packages/powerline/bindings/tmux/powerline.conf'
+source '/usr/local/lib/python2.7/site-packages/powerline/bindings/tmux/powerline.conf'
 
 # use tmux-mem-cpu-load in the status bar
 set -g status-interval 2

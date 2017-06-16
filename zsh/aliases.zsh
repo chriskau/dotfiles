@@ -31,48 +31,5 @@ alias pbztar='tar --use-compress-prog=pbzip2'
 alias rmds='find . -name .DS_Store -delete'
 alias rmo='find . -name *.orig -delete'
 
-# git aliases
-alias b="git blame"
-alias bl="git blame -L"
-alias g="git"
-alias ga="git add"
-alias gaa="git add --all"
-alias gai="git add -i"
-alias gap="git add -p"
-alias gb="git branch"
-alias gba="git branch -a"
-alias gbr="git branch -r"
-alias gca="git commit --amend"
-alias gcim="git commit -m"
-alias gcoh="git checkout HEAD"
-alias gd="git diff"
-alias gdc="git diff --cached"
-alias gdt="git difftool"
-alias gi="gity"
-alias gf="git fetch -v"
-alias gll="git log"
-alias gmt="git mergetool"
-alias go="git checkout"
-alias gp="git pull origin"
-alias gpa="g format-patch --attach -1 -o ~/Desktop/Patches"
-alias gpam="gpa | xargs open -a Mail.app"
-alias gpom="git push origin master"
-alias gpr="git pull --rebase origin"
-alias gt="git status"
-alias grh="git reset --hard"
-alias grh1="git reset --hard HEAD^"
-alias grs="git reset --soft"
-alias gs="git show"
-alias gsn="git show --pretty='format:' --name-only"
-alias gse="git send-email"
-alias gsl="git stash list"
-alias gsp="git stash pop"
-alias gsr="git svn rebase"
-alias gup="open -a GitUp `git rev-parse --show-toplevel` ."
-alias gw="git wc"
-
-alias tmux="TERM=screen-256color-bce tmux"
-
 # Quick way to rebuild the Launch Services database and get rid of duplicates in the Open With submenu
 alias fixopenwith="/System/Library/Frameworks/CoreServices.framework/Frameworks/LaunchServices.framework/Support/lsregister -kill -r -domain local -domain system -domain user"
-
