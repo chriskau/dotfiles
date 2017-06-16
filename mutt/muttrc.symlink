@@ -73,13 +73,13 @@ set ssl_use_tlsv1_2=yes
 set ssl_verify_dates=yes
 set ssl_verify_host=yes
 
-# Sidebar Patch --------------------------------------
-set sidebar_delim   = '│'
+# Sidebar --------------------------------------
 set sidebar_visible = yes
-set sidebar_width   = 36
-set sidebar_sort = no
-set sidebar_shortpath = yes
+set sidebar_width = 24
+set sidebar_sort_method = unsorted
+set sidebar_short_path = yes
 color sidebar_new color221 color233  # color of folders with new mail
+color sidebar_highlight color254 color254
 
 # Sidebar Navigation ---------------------------------
 bind index,pager <down>   sidebar-next
@@ -87,8 +87,8 @@ bind index,pager <up>     sidebar-prev
 bind index,pager <right>  sidebar-open
 
 # Status Bar -----------------------------------------
-#set status_chars  = " *%A"
-#set status_format = "───[ Folder: %f ]───[%r%m messages%?n? (%n new)?%?d? (%d to delete)?%?t? (%t tagged)? ]───%>─%?p?( %p postponed )?───"
+set status_chars  = "*%A"
+set status_format = "───[ Folder: %f ]───[%r%m messages%?n? (%n new)?%?d? (%d to delete)?%?t? (%t tagged)? ]───%>─%?p?( %p postponed )?───"
 
 # Header Options -------------------------------------
 ignore *                                # ignore all headers

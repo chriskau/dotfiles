@@ -8,7 +8,7 @@ pythonfile = ~/.offlineimap/offlineimap.py
 [Account Gmail]
 localrepository = Gmail-Local
 remoterepository = Gmail-Remote
-status_backend = sqlite
+#status_backend = sqlite
 
 [Repository Gmail-Local]
 type = Maildir
