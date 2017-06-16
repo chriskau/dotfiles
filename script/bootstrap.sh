@@ -8,36 +8,28 @@ fi
 # Update homebrew recipes
 brew update
 
-
 # Install GNU core utilities (those that come with OS X are outdated)
 brew install coreutils
-
-# Install GNU `find`, `locate`, `updatedb`, and `xargs`, g-prefixed
-brew install findutils
-
-# Install Bash 4
-brew install bash
-
-# Install more recent versions of some OS X tools
-brew tap homebrew/dupes
-brew install homebrew/dupes/grep
 
 
 # Binaries
 binaries=(
+  awscli
+  chkrootkit
   fasd
   git
+  htop
   httpie
   jq
   lynis
   msmtp
   mutt
-  muttqt
+#  muttqt
   node
   notmuch
   offline-imap
-  rethinkdb
   sshguard
+  sqlite
   tmux
   urlview
   vim
@@ -49,9 +41,6 @@ binaries=(
 echo "installing binaries..."
 brew install ${binaries[@]}
 
-# install swiftenv
-brew install kylef/formulae/swiftenv
-
 brew cleanup
 
 
@@ -61,34 +50,29 @@ brew install caskroom/cask/brew-cask
 apps=(
     adium
     alfred
+    arq
     bartender
     base
-    # blocs
-    cactus
-    # Calca
-    cloak
-    framer-studio
+#    calca
+    dhs
+    framer
     gitup
     google-chrome
-    # iA Writer ???
     kaleidoscope
-    numi
-    paw
-    # Quartz Composer
-    seil
+    little-snitch
+    lockdown
+#    numi
+    oryoki
+    oversight
+    ransomwhere
     sketch
-    skype
     slack
-    # Spectrum
     spotify
     things
     transmit
-    vagrant
     visual-studio-code
-    vox
-    # Xcode
-    # Xcode-beta
-    xscope  
+#    vox
+    zeplin
 )
 
 # Install apps to /Applications

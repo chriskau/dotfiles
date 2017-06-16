@@ -1,0 +1,263 @@
+{
+  "lists": [
+    {
+      "urls": [
+        {
+          "cookbooks": "https://github.com/opscode/cookbooks"
+        },
+        {
+          "futon": "http://127.0.0.1:5984/_utils/"
+        },
+        {
+          "couchdb-guide": "http://guide.couchdb.org/draft"
+        },
+        {
+          "jsonlint": "http://jsonlint.com/"
+        },
+        {
+          "couchdb-wiki": "http://wiki.apache.org/couchdb/FrontPage"
+        },
+        {
+          "couchdb-sql": "http://guide.couchdb.org/draft/cookbook.html"
+        },
+        {
+          "uiux-guides": "http://usabilitygeek.com/official-usability-user-experience-user-interface-guidelines-from-companies/"
+        },
+        {
+          "mobile-ux-patterns": "http://mobile-patterns.com"
+        },
+        {
+          "noise": "http://simplynoise.com/"
+        },
+        {
+          "telehash": "http://telehash.org/"
+        },
+        {
+          "resume.io": "http://resume.io/"
+        },
+        {
+          "sendwrite": "https://sendwrite.com/"
+        },
+        {
+          "qa1490": "http://developer.apple.com/library/mac/#qa/qa1490/_index.html"
+        },
+        {
+          "git-commit-msg": "http://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html"
+        },
+        {
+          "couchdb-replicator": "https://gist.github.com/832610"
+        },
+        {
+          "buy-rent-calculator": "http://www.nytimes.com/interactive/business/buy-rent-calculator.html"
+        },
+        {
+          "cocoalit": "http://cocoalit.com/"
+        },
+        {
+          "gaug.es": "http://get.gaug.es/"
+        },
+        {
+          "dochub.io": "http://dochub.io/"
+        },
+        {
+          "http made easy": "http://www.jmarshall.com/easy/http/"
+        },
+        {
+          "pears": "http://pea.rs/"
+        },
+        {
+          "builditwithme": "http://builditwith.me/"
+        }
+      ]
+    },
+    {
+      "ibm": [
+        {
+          "personas": "https://camdb07.lotus.com/u_dir/UXAssetLib.nsf/Characters-AllInformation?OpenView&Count=999999"
+        },
+        {
+          "enos": "http://w3.enos.ibm.com"
+        },
+        {
+          "dwsp": "http://w3-01.ibm.com/hr/us/benefits/alap/dwsp.html"
+        },
+        {
+          "inventor_history": "https://w3-03.sso.ibm.com/marketing/mi/miknowlgate.nsf/f.PIHReport?OpenForm&BackTo=KG"
+        },
+        {
+          "vpn-pwd-reset": "https://globalnetwork.support.att.com/changepw.html"
+        },
+        {
+          "patent_dashboard": "https://pad.rtp.raleigh.ibm.com/"
+        },
+        {
+          "design": "http://www.ibm.com/design/language/resources.shtml"
+        },
+        {
+          "watson_design": "http://wildducks.ibm.com/snugug/watson-design-guide/"
+        },
+        {
+          "mail": "https://mail.notes.na.collabserv.com/verse"
+        },
+        {
+          "workday": "https://wd5.myworkday.com/ibm/d/home.htmld"
+        },
+        {
+          "certificates": "https://daymvs1.pok.ibm.com/ibmca-wireless/view/manualSetup.do"
+        },
+        {
+          "DoRA": "https://dora.res.ibm.com/search"
+        },
+        {
+          "AssemblyKit": "http://assemblykit.w3ibm.mybluemix.net/index.html"
+        },
+        {
+          "icon_library": "https://www.ibm.com/design/language/resources/icon-library/"
+        },
+        {
+          "watson_workspace": "https://workspace.ibm.com/space/58c16a50e4b09791570dc324"
+        },
+        {
+          "ThinkIP": "https://ibm.anaqua.com/"
+        }
+      ]
+    },
+    {
+      "destiny": [
+        {
+          "gorgons": "http://gorgon.exchange"
+        },
+        {
+          "exotics": "http://destinyexotics.com"
+        },
+        {
+          "status": "http://destinystatus.com/psn/honjo73"
+        },
+        {
+          "reddit": "https://www.reddit.com/r/DestinyTheGame/"
+        },
+        {
+          "bc63_slack": "https://bravocompany63.slack.com/messages/prison-of-elders/"
+        },
+        {
+          "bungie": "https://www.bungie.net"
+        },
+        {
+          "crucible": "https://www.reddit.com/r/CruciblePlaybook/"
+        },
+        {
+          "lighthouse_sherpas": "https://www.reddit.com/r/LighthouseSherpas/"
+        },
+        {
+          "maps": "https://www.reddit.com/r/CruciblePlaybook/wiki/maps"
+        },
+        {
+          "gearmanager": "https://www.bungie.net/en/Gear/Manager/2/4611686018428710212/2305843009267988419"
+        },
+        {
+          "guardian.gg": "https://guardian.gg"
+        }
+      ]
+    },
+    {
+      "js": [
+        {
+          "cradle": "http://cloudhead.io/cradle"
+        },
+        {
+          "backbone": "http://documentcloud.github.com/backbone/"
+        },
+        {
+          "mustache": "https://github.com/janl/mustache.js"
+        },
+        {
+          "underscore": "http://documentcloud.github.com/underscore/"
+        },
+        {
+          "doT": "http://olado.github.com/doT/"
+        },
+        {
+          "jsbin": "http://jsbin.com/"
+        },
+        {
+          "jsfiddle": "http://jsfiddle.net/"
+        }
+      ]
+    },
+    {
+      "startup": [
+        {
+          "docracy": "http://www.docracy.com/"
+        },
+        {
+          "clerky": "https://www.clerky.com"
+        },
+        {
+          "legal checklist": "http://walkercorporatelaw.com/startup-issues/legal-checklist-for-startups/"
+        },
+        {
+          "if i launched a startup": "http://startuplawyer.com/startup-issues/if-i-launched-a-startup"
+        }
+      ]
+    },
+    {
+      "japanese": [
+        {
+          "wanikani": "https://www.wanikani.com/"
+        },
+        {
+          "textfugu": "http://www.textfugu.com"
+        },
+        {
+          "jisho": "http://beta.jisho.org"
+        },
+        {
+          "kanji_sheets": "http://jensechu.github.io/kanji/"
+        }
+      ]
+    },
+    {
+      "design": [
+        {
+          "random user": "http://randomuser.me"
+        },
+        {
+          "product screenshots": "http://placeit.breezi.com"
+        },
+        {
+          "iOS 7 design cheat sheet": "http://ivomynttinen.com/blog/the-ios-7-design-cheat-sheet/"
+        }
+      ]
+    },
+    {
+      "unix": [
+        {
+          "tmux_crash_course": "http://robots.thoughtbot.com/post/2641409235/a-tmux-crash-course?utm_source=changelog"
+        },
+        {
+          "lldb-gdb": "http://lldb.llvm.org/lldb-gdb.html"
+        }
+      ]
+    },
+    {
+      "caltwit": [
+        {
+          "node": "https://no.de"
+        },
+        {
+          "iris": "http://chriskau.iriscouch.com/_utils/index.html"
+        }
+      ]
+    },
+    {
+      "framer.js": [
+        {
+          "modules": "http://framer.parts"
+        },
+        {
+          "framer": "http://framerjs.com"
+        }
+      ]
+    }
+  ]
+}
