@@ -31,7 +31,7 @@ remotepasseval = get_keychain_pass(account="chris.b.kau", server="imap.gmail.com
 maxconnections = 2
 realdelete = no
 ssl = yes
-sslcacertfile = /usr/local/etc/openssl/osx_cert.pem
+sslcacertfile = /usr/local/etc/openssl/cert.pem
 nametrans = lambda folder: {'[Gmail]/All Mail':  'Archive',
                             '[Gmail]/Drafts':    'Drafts',
                             '[Gmail]/Important': 'Important',

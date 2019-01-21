@@ -1,22 +1,23 @@
-# initialise colours
-autoload -U colors
-colors
-
 export LSCOLORS="exfxcxdxbxegedabagacad"
 export CLICOLOR=true
 
 export GREP_COLOR=32    # some greps have colorized ouput. enable...
 export GREPCOLOR=32     # ditto here
 
+# autoload zsh functions
+fpath=($ZSH/functions $fpath)
+
+autoload -U $ZSH/functions/*(:t)
+
+# initialise colours
+autoload -U colors
+colors
+
 autoload -U compinit promptinit
 compinit
 promptinit
 
 autoload -U zmv         # for massive renames
-
-# autoload zsh functions
-fpath=($ZSH/functions $fpath)
-autoload -U $ZSH/functions/*(:t)
 
 # history options
 HISTFILE=~/.zsh_history
@@ -44,13 +45,12 @@ setopt autocd
 # allow for functions in the prompt
 setopt PROMPT_SUBST
 
-setopt COMPLETE_ALIASES
+# don't complete aliases _before_ completion has finished
+setopt complete_aliases
 
 bindkey '^[^[[D' backward-word
 bindkey '^[^[[C' forward-word
 bindkey '^[[5D' beginning-of-line
 bindkey '^[[5C' end-of-line
 bindkey '^[[3~' delete-char
-bindkey '^[^N' newtab
 bindkey '^?' backward-delete-char
-

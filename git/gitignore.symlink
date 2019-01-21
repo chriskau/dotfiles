@@ -1,11 +1,6 @@
 .DS_Store
-Icon?
-._*
-.svn
 *~
 *.swp
-.Spotlight-V100
-.Trashes
 
 # Xcode / Swift
 *.orig
@@ -33,4 +28,3 @@ profile
 # Obj-C/Swift specific
 *.hmap
 *.ipa
-

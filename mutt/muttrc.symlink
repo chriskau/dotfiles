@@ -39,14 +39,14 @@ set sendmail = "/usr/local/bin/msmtp -a chris.b.kau"
 set sendmail_wait = 0
 unset record
 
-set spoolfile = '+chris.b.kau@gmail.com/INBOX'
+set spoolfile = '+chris.b.kau@gmail.com/Inbox'
 set mbox = '+chris.b.kau@gmail.com/Archive'
 set postponed = '+chris.b.kau@gmail.com/Drafts'
 set record = '+chris.b.kau@gmail.com/Sent'
-# set trash = '+chris.b.kau@gmail.com/Trash'
+set trash = '+chris.b.kau@gmail.com/Trash'
 
 # Mailboxes to show in the sidebar.
-mailboxes +chris.b.kau@gmail.com/INBOX \
+mailboxes +chris.b.kau@gmail.com/Inbox \
           +chris.b.kau@gmail.com/Sent \
           +chris.b.kau@gmail.com/Archive \
           +chris.b.kau@gmail.com/Spam \

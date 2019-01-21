@@ -1,4 +1,0 @@
-# open Mail.app with specified file as attachement
-mf () {
-	open "${1}" -a Mail.app
-}
