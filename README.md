@@ -1,9 +1,11 @@
 ## dotfiles
 
-your dotfiles are how you personalize your system. These are mine.
+Your dotfiles are how you personalize your system. These are mine.
 
 
 ## install
+
+Run this:
 
 - `git clone git://github.com/chriskau/dotfiles ~/.dotfiles`
 - `cd ~/.dotfiles`
@@ -18,7 +20,7 @@ The main file you'll want to change right off the bat is `zsh/zshrc.symlink`, wh
 
 ## topical
 
-everything's built around topic areas. if you're adding a new area to your forked dotfiles — say, "Java" — you can simply add a `java` directory and put files in there. anything with an extension of `.zsh` will get automatically included into your shell. anything with an extension of `.symlink` will get symlinked without extension into `$HOME` when you run `script/bootstrap`.
+Everything's built around topic areas. If you're adding a new area to your forked dotfiles — say, "Java" — you can simply add a `java` directory and put files in there. Anything with an extension of `.zsh` will get automatically included into your shell. Anything with an extension of `.symlink` will get symlinked without extension into `$HOME` when you run `script/bootstrap`.
 
 
 ## components
@@ -43,4 +45,4 @@ There's a few special files in the hierarchy.
 
 ## thanks
 
-this started out as a fork of [Zach Holman](http://github.com/holman)'s brilliant [dotfiles](http://github.com/holman/dotfiles)
+This started out as a fork of [Zach Holman](http://github.com/holman)'s brilliant [dotfiles](http://github.com/holman/dotfiles)

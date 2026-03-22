@@ -4,7 +4,6 @@
 chmod go-rx ~
 chmod go-rx /Users/Guest
 
-
 # disable Unnecessary Services
 launchctl unload -w /System/Library/LaunchDaemons/com.apple.blued.plist
 launchctl unload -w /System/Library/LaunchDaemons/com.apple.nis.ypbind.plist
@@ -21,12 +20,9 @@ launchctl unload -w /System/Library/LaunchAgents/com.apple.RemoteDesktop.plist
 # disable notification center
 launchctl unload -w /System/Library/LaunchAgents/com.apple.notificationcenterui.plist
 
-
 # disable Setuid and Setguid Binaries
 chmod ug-s /System/Library/CoreServices/RemoteManagement/ARDAgent.app/Contents/MacOS/ARDAgent
 chmod ug-s /System/Library/Printers/IOMs/LPRIOM.plugin/Contents/MacOS/LPRIOMHelper
-#/System/Library/PrivateFrameworks/Admin.framework/Versions/A/Resources/readconfig
-#/System/Library/PrivateFrameworks/Install.framework/Versions/A/Resources/runner
 
 chmod ug-s /sbin/mount_nfs
 
@@ -51,20 +47,6 @@ chmod ug-s /usr/sbin/postqueue
 chmod ug-s /usr/sbin/scselect
 chmod ug-s /usr/sbin/traceroute
 chmod ug-s /usr/sbin/traceroute6
-
-
-# disable Bonjour
-# defaults write /System/Library/LaunchDaemons/com.apple.mDNSResponder ProgramArguments -array-add "-NoMulticastAdvertisements"
-
-# disable SafeSleep/Hibernate
-# pmset hibernatemode 0
-# rm -rf /var/vm/sleepimage
-
-# disable AutoPowerOff
-# pmset -a autopoweroff 0
-
-# disable sudden motion sensor
-# sudo pmset -a sms 0
 
 # update sysctl settings
 cat sysctl.conf >> /etc/sysctl.conf
