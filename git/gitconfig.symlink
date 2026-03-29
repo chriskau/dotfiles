@@ -1,11 +1,12 @@
+# Local/private config goes into the include
+[include]
+	path = ~/.gitconfig.local
+
 [user]
 	name = Chris Kau
-	email = chris.b.kau@gmail.com
+	email = 6806+chriskau@users.noreply.github.com
 [core]
     editor = vim
-[color]
-	pager = true
-	ui = auto
 [alias]
 	br = branch
 	ca = commit --amend
@@ -36,31 +37,35 @@
 	add-unmerged = "!f() { git ls-files --unmerged | cut -f2 | sort -u ; }; git add `f`"
 
     in = !git init && cp ~/.gitignore .
-[pack]
-	threads = 0
-[push]
-	default = simple
-[gc]
-	reflogexpire = 300
-	reflogexpireunreachable = 90
-[sendemail]
-	chainreplyto = false
-	cccmd = git-cc
-[diff]
-	tool = Kaleidoscope
+[color]
+	diff = auto
+	status = auto
+	branch = auto
+	pager = true
+	ui = auto
+[core]
+    excludesfile = ~/.gitignore
+	editor = vim
+[apply]
+	whitespace = nowarn
+[mergetool]
+	keepbackup = false
 [difftool]
 	prompt = false
-[merge]
-	conflictstyle = diff3
-	tool = Kaleidoscope
-[mergetool]
-	prompt = false
-[rerere]
-	enabled = 1
-[difftool "Kaleidoscope"]
-	cmd = ksdiff --partial-changeset --relative-path \"$MERGED\" -- \"$LOCAL\" \"$REMOTE\"
-[mergetool "Kaleidoscope"]
-	cmd = ksdiff --merge --output \"$MERGED\" --base \"$BASE\" -- \"$LOCAL\" --snapshot \"$REMOTE\" --snapshot
-	trustExitCode = true
+[help]
+	autocorrect = 1
+[hub]
+	protocol = https
+[push]
+	# See `git help config` (search for push.default)
+	# for more information on different options of the below setting.
+	#
+	# Setting to git 2.0 default to suppress warning messages
+	# about the deprecated behavior of the default setting.
+	default = simple
 [credential]
 	helper = osxkeychain
+[init]
+	defaultBranch = main
+[pull]
+	rebase = true
