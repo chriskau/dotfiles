@@ -1,4 +1,4 @@
 #!/bin/sh
 
 # silence the startup sound
-nvram SystemAudioVolume=%00
+sudo nvram StartupMute=%00
