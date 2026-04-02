@@ -1,55 +1,38 @@
 #!/bin/sh
 
-# Secure Users' Home Folder Permissions
-chmod go-rx ~
-chmod go-rx /Users/Guest
+echo "Starting security hardening..."
 
-# disable Unnecessary Services
-launchctl unload -w /System/Library/LaunchDaemons/com.apple.blued.plist
-launchctl unload -w /System/Library/LaunchDaemons/com.apple.nis.ypbind.plist
-launchctl unload -w /System/Library/LaunchDaemons/com.apple.RemoteDesktop.PrivilegeProxy.plist
-launchctl unload -w /System/Library/LaunchDaemons/com.apple.RFBEventHelper.plist
-launchctl unload -w /System/Library/LaunchDaemons/com.apple.racoon.plist
-launchctl unload -w /System/Library/LaunchDaemons/com.apple.UserNotificationCenter.plist
-launchctl unload -w /System/Library/LaunchDaemons/com.apple.webdavfs_load_kext.plist
-launchctl unload -w /System/Library/LaunchDaemons/org.postfix.master.plist
+# Secure Home Folder Permissions
+# Ensures other local users cannot traverse your home directory.
+chmod -R go-rx ~
 
-# disable remote desktop
-launchctl unload -w /System/Library/LaunchAgents/com.apple.RemoteDesktop.plist
+# Secure Shared Folder Permissions
+# Prevents other users from seeing what is in the /Users/Shared directory.
+chmod -R go-rx /Users/Shared
 
-# disable notification center
-launchctl unload -w /System/Library/LaunchAgents/com.apple.notificationcenterui.plist
+# Enable Application Layer Firewall (ALF)
+# Sets the firewall to 'On' and blocks all incoming non-essential connections.
+sudo /usr/libexec/ApplicationFirewall/socketfilterfw --setglobalstate on
+sudo /usr/libexec/ApplicationFirewall/socketfilterfw --setstealthmode on
 
-# disable Setuid and Setguid Binaries
-chmod ug-s /System/Library/CoreServices/RemoteManagement/ARDAgent.app/Contents/MacOS/ARDAgent
-chmod ug-s /System/Library/Printers/IOMs/LPRIOM.plugin/Contents/MacOS/LPRIOMHelper
+# Reduce Sudo Timeout
+# By default, sudo stays authenticated for 5 minutes. This reduces it to 0,
+# requiring a password for every sudo command (increase to 1 or 2 if preferred).
+if ! grep -q "timestamp_timeout" /etc/sudoers; then
+    echo "Defaults timestamp_timeout=0" | sudo tee -a /etc/sudoers > /dev/null
+fi
 
-chmod ug-s /sbin/mount_nfs
+# Disable Captive Portal Detection (Privacy)
+# Prevents the Mac from automatically pinging Apple's servers when joining Wi-Fi.
+sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.captive.control Active -bool false
 
-chmod ug-s /usr/bin/at
-chmod ug-s /usr/bin/atq
-chmod ug-s /usr/bin/atrm
-chmod ug-s /usr/bin/batch
-chmod ug-s /usr/bin/chpass
-chmod ug-s /usr/bin/crontab
-chmod ug-s /usr/bin/ipcs
-chmod ug-s /usr/bin/newgrp
-chmod ug-s /usr/bin/procmail
-chmod ug-s /usr/bin/wall
-chmod ug-s /usr/bin/write
-chmod ug-s /bin/rcp
-chmod ug-s /usr/bin/rlogin
-chmod ug-s /usr/bin/rsh
-chmod ug-s /usr/lib/sa/sadc
+# Ensure Gatekeeper is Enabled
+# Re-arms Gatekeeper to ensure only signed/notarized apps can run.
+sudo spctl --master-enable
 
-chmod ug-s /usr/sbin/postdrop
-chmod ug-s /usr/sbin/postqueue
-chmod ug-s /usr/sbin/scselect
-chmod ug-s /usr/sbin/traceroute
-chmod ug-s /usr/sbin/traceroute6
+# Metadata Privacy
+# Disables the creation of .DS_Store files on network and USB volumes.
+defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
+defaults write com.apple.desktopservices DSDontWriteUSBStores -bool true
 
-# update sysctl settings
-cat sysctl.conf >> /etc/sysctl.conf
-
-# restart sysctl
-sysctl -w
+echo "Hardening complete. Some changes may require a logout or restart."
