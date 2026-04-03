@@ -55,10 +55,15 @@ chflags nohidden ~/Library
 
 # --- Dock ---
 # Set icon size and autohide behavior
-defaults write com.apple.dock tilesize -int 48
+defaults write com.apple.dock tilesize -int 47
+defaults write com.apple.dock largesize -int 66
+defaults write com.apple.dock magnification -int 1
 defaults write com.apple.dock autohide -bool true
 defaults write com.apple.dock autohide-delay -float 0
 defaults write com.apple.dock autohide-time-modifier -float 0.5
+
+# Disable showing suggested and recent apps
+defaults write com.apple.dock show-recents -bool false
 
 # --- Safari ---
 # Hide Safari's bookmark bar.
