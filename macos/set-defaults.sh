@@ -41,6 +41,9 @@ defaults write com.apple.screencapture disable-shadow -bool true
 defaults write NSGlobalDomain AppleShowAllExtensions -bool true
 defaults write com.apple.Finder AppleShowAllFiles -bool true
 
+# Always open everything in Finder's list view.
+defaults write com.apple.Finder FXPreferredViewStyle Nlsv
+
 # Display full POSIX path in Finder title
 defaults write com.apple.finder _FXShowPosixPathInTitle -bool true
 
@@ -56,6 +59,20 @@ defaults write com.apple.dock tilesize -int 48
 defaults write com.apple.dock autohide -bool true
 defaults write com.apple.dock autohide-delay -float 0
 defaults write com.apple.dock autohide-time-modifier -float 0.5
+
+# --- Safari ---
+# Hide Safari's bookmark bar.
+defaults write com.apple.Safari.plist ShowFavoritesBar -bool false
+
+# Always show Safari's "URL display" tab in the lower left on mouseover.
+defaults write com.apple.Safari ShowOverlayStatusBar -bool true
+
+# Set up Safari for development.
+defaults write com.apple.Safari.SandboxBroker ShowDevelopMenu -bool true
+defaults write com.apple.Safari.plist IncludeDevelopMenu -bool true
+defaults write com.apple.Safari.plist WebKitDeveloperExtrasEnabledPreferenceKey -bool true
+defaults write com.apple.Safari.plist "com.apple.Safari.ContentPageGroupIdentifier.WebKit2DeveloperExtrasEnabled" -bool true
+defaults write NSGlobalDomain WebKitDeveloperExtras -bool true
 
 # --- Security ---
 # Set the auto log out delay to 10 mins
