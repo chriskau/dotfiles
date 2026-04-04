@@ -29,4 +29,7 @@ echo >> $HOME/.zprofile
 echo 'eval "$(/opt/homebrew/bin/brew shellenv zsh)"' >> $HOME/.zprofile
 eval "$(/opt/homebrew/bin/brew shellenv zsh)"
 
+# Opt out of Homebrew analytics
+brew analytics off
+
 exit 0
