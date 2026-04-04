@@ -24,4 +24,9 @@ fi
 # Link keg-only formulas that we want in PATH
 brew list | grep 'postgresql@' | xargs -I {} brew link {} --force 2>/dev/null
 
+# Add Homebrew to PATH
+echo >> $HOME/.zprofile
+echo 'eval "$(/opt/homebrew/bin/brew shellenv zsh)"' >> $HOME/.zprofile
+eval "$(/opt/homebrew/bin/brew shellenv zsh)"
+
 exit 0
