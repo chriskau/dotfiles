@@ -69,9 +69,6 @@ defaults write com.apple.dock show-recents -bool false
 # Hide Safari's bookmark bar.
 defaults write com.apple.Safari.plist ShowFavoritesBar -bool false
 
-# Always show Safari's "URL display" tab in the lower left on mouseover.
-defaults write com.apple.Safari ShowOverlayStatusBar -bool true
-
 # Set up Safari for development.
 defaults write com.apple.Safari.SandboxBroker ShowDevelopMenu -bool true
 defaults write com.apple.Safari.plist IncludeDevelopMenu -bool true
