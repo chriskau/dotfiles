@@ -7,7 +7,6 @@ alias -g ...='../..'
 # alias -s js=vim
 alias -s txt=vim
 alias -s log="less -MN"
-alias -s db="open -a /Applications/Base.app/Contents/MacOS/Base"
 alias -s md="open -a '/Applications/iA Writer.app/Contents/MacOS/iA Writer'"
 
 # general aliases
