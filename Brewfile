@@ -12,7 +12,7 @@ brew 'zsh-syntax-highlighting'
 
 cask 'alfred'
 cask 'antigravity'
-cask 'arq'
+# cask 'arq'
 cask 'bartender'
 cask 'claude'
 cask 'claude-code'
