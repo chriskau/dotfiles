@@ -78,7 +78,7 @@ defaults write NSGlobalDomain WebKitDeveloperExtras -bool true
 
 # --- Security ---
 # Set the auto log out delay to 10 mins
-defaults write /Library/Preferences/.GlobalPreferences com.apple.autologout.AutoLogOutDelay -int 600
+# defaults write /Library/Preferences/.GlobalPreferences com.apple.autologout.AutoLogOutDelay -int 600
 
 # Kill affected applications to apply changes
 for app in Finder Dock SystemUIServer; do
