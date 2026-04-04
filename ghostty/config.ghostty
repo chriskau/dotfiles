@@ -1,0 +1,24 @@
+theme = vesper
+
+shell-integration-features = no-cursor,sudo,no-title
+
+cursor-style = block
+
+# background = #1C2021
+background = #101010
+# foreground = #ffffff
+
+background-opacity = 0.9
+
+macos-titlebar-style = transparent
+macos-applescript = false
+macos-icon = glass
+macos-icon-frame = plastic
+
+mouse-hide-while-typing = true
+
+window-colorspace = "display-p3"
+window-height = 40
+window-width = 140
+window-padding-balance = true
+window-save-state = always
